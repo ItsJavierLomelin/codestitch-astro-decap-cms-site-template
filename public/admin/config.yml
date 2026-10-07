@@ -1,9 +1,9 @@
 # Use DecapBridge auth (required)
 backend:
   name: git-gateway
-  repo: CodeStitchOfficial/Intermediate-Astro-Decap-CMS
+  repo: "{GitHub Owner}/{Repo Name}"
   branch: main
-  identity_url: https://auth.decapbridge.com/sites/1ea1e8dd-3c54-40d7-bbe1-74af6c8f16f6
+  identity_url: "{DecapBridge Identity URL}"
   gateway_url: https://gateway.decapbridge.com
 
   # Quickly see who did what (optional)
@@ -19,7 +19,7 @@ backend:
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 
 # Add site link in DecapCMS (optional)
-site_url: https://intermediate-astro-kit-decap-cms.netlify.app
+site_url: "{Site URL}"
 
 media_folder: src/assets/images/blog # Location where files will be stored in the repo - we store them in src so that Astro can optimize them.
 public_folder: "@assets/images/blog" # Same folder as above, but using a path alias for easier referencing in the markdown files.
