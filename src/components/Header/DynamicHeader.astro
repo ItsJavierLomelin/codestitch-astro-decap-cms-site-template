@@ -19,6 +19,7 @@ import { isCurrentPage, getDropdownId } from "@js/utils.js";
 import DarkModeToggle from "@components/DarkModeToggle/DarkModeToggle.astro";
 
 // Data
+import { TOKENS } from "@data/template";
 import navData from "@data/navData.json";
 ---
 
@@ -28,7 +29,7 @@ import navData from "@data/navData.json";
 		<a
 			href="/"
 			class="cs-logo"
-			aria-label="Return to [Company Name] Home page"
+			aria-label={`Return to ${TOKENS.bizName} Home page`}
 		>
 			<Icon name="logo-black" />
 		</a>
