@@ -1,4 +1,5 @@
 ---
+import { COPY, TOKENS } from "@data/template";
 /**
  * * This page is the blog index and displays all the articles in a grid
  **/
@@ -22,8 +23,8 @@ const posts = await getCollection("blog");
 posts.sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
 ---
 
-<BaseLayout title="Blog" description="Meta description for the page" heroImage={placeholderOptimizedImage}>
-	<Banner title="Blog" image={placeholderOptimizedImage} />
+<BaseLayout title={COPY.pages.blog.title} description={COPY.pages.blog.description} heroImage={placeholderOptimizedImage}>
+	<Banner title={COPY.pages.blog.banner} image={placeholderOptimizedImage} />
 
 	<!-- Use the BlogRecentArticles layout to display the recent articles in a standard grid -->
 	<!-- <BlogRecentArticles posts={posts} /> -->
