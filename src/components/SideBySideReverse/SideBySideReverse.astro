@@ -1,4 +1,5 @@
 ---
+import { COPY, TOKENS } from "@data/template";
 // SideBySideReverse component from index.astro (#sbs-r section)
 
 // Utils
@@ -15,7 +16,7 @@ import cabinets2 from "@assets/images/services/cabinets2.jpg";
     <div class="cs-left">
       <Picture
         src={construction}
-        alt="house"
+        alt={COPY.about.imageTwoAlt}
         width={400}
         height={560}
         formats={['avif', 'webp']}
@@ -23,7 +24,7 @@ import cabinets2 from "@assets/images/services/cabinets2.jpg";
       />
       <Picture
         src={cabinets2}
-        alt="cabinets"
+        alt={COPY.about.imageOneAlt}
         width={400}
         height={560}
         formats={['avif', 'webp']}
@@ -32,23 +33,10 @@ import cabinets2 from "@assets/images/services/cabinets2.jpg";
     </div>
     <!-- Right Content Section-->
     <div class="cs-right">
-      <span class="cs-topper">SEO Ranking</span>
-      <h2 class="cs-title">Talk about a main service keyword</h2>
-      <p class="cs-text">
-        In consequat tincidunt turpis sit amet imperdiet. Praesent Class
-        officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur
-        et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent
-        nonatourean olei aptent taciti sociosqu ad litora torquent per.
-      </p>
-      <p class="cs-text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non tenetur,
-        iure nihil ipsam qui atque commodi id voluptatem nesciunt, quis animi
-        fuga cum doloribus! Eaque laboriosam, unde consectetur iure asperiores
-        ullam. Consequuntur debitis a voluptatibus vitae optio autem explicabo
-        quia neque est quas, in placeat. Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Doloribus modi laudantium voluptatibus
-        rem libero error minus quia eligendi sapiente eos.
-      </p>
+      <span class="cs-topper">{COPY.mainServiceSection.topper}</span>
+      <h2 class="cs-title">{COPY.mainServiceSection.title}</h2>
+      <p class="cs-text">{COPY.mainServiceSection.paragraphOne}</p>
+      <p class="cs-text">{COPY.mainServiceSection.paragraphTwo}</p>
     </div>
   </div>
 </section>
