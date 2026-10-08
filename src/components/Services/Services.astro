@@ -1,39 +1,19 @@
 ---
+import { COPY, TOKENS } from "@data/template";
 // Utils
 import { Icon } from 'astro-icon/components';
 ---
 
 <section id="services" class="services">
-  <div class="card">
-    <picture>
-      <Icon name="service1" width="48" height="48" aria-hidden="true" />
-    </picture>
-    <h2>Service 1</h2>
-    <p>
-      Talk about the service with keywords people will be searching for it by.
-      Keep it 1-2 sentences.
-    </p>
-  </div>
-  <div class="card">
-    <picture>
-      <Icon name="service2" width="48" height="48" aria-hidden="true" />
-    </picture>
-    <h2>Service 2</h2>
-    <p>
-      Talk about the service with keywords people will be searching for it by.
-      Keep it 1-2 sentences.
-    </p>
-  </div>
-  <div class="card">
-    <picture>
-      <Icon name="service3" width="48" height="48" aria-hidden="true" />
-    </picture>
-    <h2>Service 3</h2>
-    <p>
-      Talk about the service with keywords people will be searching for it by.
-      Keep it 1-2 sentences.
-    </p>
-  </div>
+  {COPY.services.map((service) => (
+    <div class="card">
+      <picture>
+        <Icon name={service.icon} width="48" height="48" aria-hidden="true" />
+      </picture>
+      <h2>{service.title}</h2>
+      <p>{service.text}</p>
+    </div>
+  ))}
 </section>
 
 <style lang="less">
