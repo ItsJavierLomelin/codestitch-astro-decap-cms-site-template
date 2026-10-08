@@ -1,4 +1,5 @@
 ---
+import { COPY, TOKENS } from "@data/template";
 // Utils
 import { getImage } from "astro:assets";
 
@@ -14,8 +15,8 @@ import landingImage from "@assets/images/landing.jpg";
 const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 ---
 
-<BaseLayout title="About" description="Meta description for the page" heroImage={optimizedImage}>
-	<Banner title="About Us" image={optimizedImage} />
+<BaseLayout title={COPY.pages.about.title} description={COPY.pages.about.description} heroImage={optimizedImage}>
+	<Banner title={COPY.pages.about.banner} image={optimizedImage} />
 	<SideBySide />
 	<FAQ />
 	<CTA />
