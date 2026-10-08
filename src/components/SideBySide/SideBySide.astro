@@ -1,4 +1,5 @@
 ---
+import { COPY, TOKENS } from "@data/template";
 import { Icon } from "astro-icon/components";
 // SideBySide component from index.astro (#sbs section)
 
@@ -14,28 +15,22 @@ import construction from "@assets/images/services/construction.jpg";
 	<div class="cs-container">
 		<!-- Left Image Section -->
 		<div class="cs-left">
-			<Picture src={cabinets2} alt="cabinets" width={522} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} priority />
-			<Picture src={construction} alt="house" width={390} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} priority />
+			<Picture src={cabinets2} alt={COPY.about.imageOneAlt} width={522} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} priority />
+			<Picture src={construction} alt={COPY.about.imageTwoAlt} width={390} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} priority />
 		</div>
 		<!-- Right Content Section-->
 		<div class="cs-right">
-			<span class="cs-topper">About Us</span>
-			<h2 class="cs-title">About Company Title</h2>
-			<p class="cs-text">
-				In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti
-				sociosqu ad litora torquent per.
-			</p>
-			<p class="cs-text">
-				In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti
-				sociosqu ad litora torquent per.
-			</p>
+			<span class="cs-topper">{COPY.about.topper}</span>
+			<h2 class="cs-title">{COPY.about.title}</h2>
+			<p class="cs-text">{COPY.about.paragraphOne}</p>
+			<p class="cs-text">{COPY.about.paragraphTwo}</p>
 			<div class="cs-flex-group">
-				<p class="cs-flex-p">In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.</p>
-				<span class="cs-name">Justin Time</span>
-				<span class="cs-job">CEO-Founder</span>
+				<p class="cs-flex-p">{COPY.about.quote}</p>
+				<span class="cs-name">{TOKENS.founder}</span>
+				<span class="cs-job">{TOKENS.founderTitle}</span>
 				<Icon name="quote-white" class="cs-quote-icon" />
 			</div>
-			<a href="/about/" class="cs-button-solid">More About Us</a>
+			<a href="/about/" class="cs-button-solid">{COPY.about.button}</a>
 		</div>
 	</div>
 </section>
