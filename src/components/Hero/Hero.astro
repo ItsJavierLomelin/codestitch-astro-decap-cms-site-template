@@ -1,4 +1,5 @@
 ---
+import { COPY, TOKENS } from "@data/template";
 /**
  * * The hero component used on the homepage
  * * Takes an image as a prop
@@ -19,18 +20,13 @@ const { image } = Astro.props as Props;
 <section id="hero">
 	<div class="cs-container">
 		<div class="cs-flex-group">
-			<span class="cs-topper">Intermediate Kit</span>
-			<h1 class="cs-title">Intermediate Astro v7 <br /> Decap CMS</h1>
-			<p class="cs-text">
-				This intermediate kit includes a pre-configured Astro
-				environment, which allows for repeated components, centralized
-				data and greater room to scale as your clients grow. Decap CMS
-				has been integrated to run a blog.
-			</p>
-			<a href="/about/" class="cs-button-solid">Explore More</a>
+			<span class="cs-topper">{COPY.hero.topper}</span>
+			<h1 class="cs-title">{COPY.hero.titleLineOne} <br /> {COPY.hero.titleLineTwo}</h1>
+			<p class="cs-text">{COPY.hero.text}</p>
+			<a href="/about/" class="cs-button-solid">{COPY.hero.primaryButton}</a>
 			<a href="/contact/" class="cs-button-transparent">
 				<Icon name="play" class="cs-img" />
-				Get in Touch
+				{COPY.hero.secondaryButton}
 			</a>
 		</div>
 	</div>
@@ -38,7 +34,7 @@ const { image } = Astro.props as Props;
 	<!-- Using the preloaded image from the props -->
 	<Picture
 		src={image.src}
-		alt="new home"
+		alt={COPY.hero.imageAlt}
 		width={image.attributes.width}
 		height={image.attributes.height}
 		formats={["avif", "webp"]}
