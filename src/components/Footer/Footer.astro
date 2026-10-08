@@ -5,6 +5,7 @@ import { getCurrentYear } from "@js/utils";
 
 // Data
 import { BUSINESS } from "@data/client";
+import { COPY, TOKENS } from "@data/template";
 import navData from "@data/navData.json";
 
 const currentYear = getCurrentYear();
@@ -16,14 +17,11 @@ const currentYear = getCurrentYear();
 			<a
 				class="logo"
 				href="/"
-				aria-label="Return to [Company Name] Home page"
+				aria-label={`Return to ${TOKENS.bizName} Home page`}
 			>
 				<Icon name="logo-white" width="264" height="78" />
 			</a>
-			<p>
-				Extra content if you need it, if not you can delete this whole p
-				tag. I usually do.
-			</p>
+			<p>{COPY.footer.blurb}</p>
 		</div>
 		<div class="right-section">
 			<div class="lists">
@@ -43,10 +41,10 @@ const currentYear = getCurrentYear();
 					<li>
 						<h2>Services</h2>
 					</li>
-					<li>Service1</li>
-					<li>Service2</li>
-					<li>Service4</li>
-					<li>Service5</li>
+					<li>{TOKENS.serviceOne}</li>
+					<li>{TOKENS.serviceTwo}</li>
+					<li>{TOKENS.serviceThree}</li>
+					<li>{TOKENS.serviceFour}</li>
 				</ul>
 				<ul>
 					<li>
@@ -76,8 +74,8 @@ const currentYear = getCurrentYear();
 	</div>
 
 	<div class="credit">
-		<span>Designed and Hand Coded by </span>
-		<a href="/" target="_blank" rel="noopener">Your Company Name </a>
+		<span>Website by </span>
+		<a href="/" target="_blank" rel="noopener">{COPY.footer.creditName} </a>
 		<span class="copyright"> Copyright {currentYear} - Present</span>
 	</div>
 </footer>
