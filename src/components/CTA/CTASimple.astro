@@ -1,4 +1,5 @@
 ---
+import { COPY, TOKENS } from "@data/template";
 /**
  * * Simplified CTA component using Astro's built-in Picture component
  **/
@@ -13,12 +14,12 @@ import ctaImage from "@assets/images/CTA/cabinets2.jpg";
 <section id="cta">
 	<div class="container">
 		<h2 class="title">
-			Get It Done
+			{COPY.cta.titleLineOne}
 			<br />
-			With Us Today
+			{COPY.cta.titleLineTwo}
 		</h2>
-		<p>Say something catchy, informative, and encouraging to click the button to go to the contact page. I like to add these to the bottom of all pages.</p>
-		<a href="/contact/" class="cs-button-solid">Get an Estimate Now</a>
+		<p>{COPY.cta.text}</p>
+		<a href="/contact/" class="cs-button-solid">{COPY.cta.button}</a>
 	</div>
 	<Picture src={ctaImage} alt="" layout="full-width" formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture" }} />
 </section>
