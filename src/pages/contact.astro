@@ -1,4 +1,5 @@
 ---
+import { COPY, TOKENS } from "@data/template";
 // Utils
 import { Picture, getImage } from "astro:assets";
 
@@ -15,16 +16,16 @@ import skyscraperImage from "@assets/images/gallery/skyscraper.jpg";
 const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 ---
 
-<BaseLayout title="Contact" description="Meta description for the page" heroImage={optimizedImage}>
-	<Banner title="Contact" image={optimizedImage} />
+<BaseLayout title={COPY.pages.contact.title} description={COPY.pages.contact.description} heroImage={optimizedImage}>
+	<Banner title={COPY.pages.contact.banner} image={optimizedImage} />
 
 	<section id="cs-contact">
 		<div class="cs-container">
 			<form id="cs-form" name="Contact Form" method="post">
 				<div class="cs-content">
-					<span class="cs-topper">Contact</span>
-					<h2 class="cs-title">Get in Touch</h2>
-					<p class="cs-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices odio pulvinar. Sed ut.</p>
+					<span class="cs-topper">{COPY.contact.topper}</span>
+					<h2 class="cs-title">{COPY.contact.title}</h2>
+					<p class="cs-text">{COPY.contact.text}</p>
 				</div>
 				<label>
 					Name
@@ -46,7 +47,7 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 					Message
 					<textarea required name="Message" id="message" placeholder="Write message..."></textarea>
 				</label>
-				<button class="cs-button-solid" type="submit">Submit Message</button>
+				<button class="cs-button-solid" type="submit">{COPY.contact.button}</button>
 			</form>
 			<div class="cs-right-section">
 				<!--Email-->
