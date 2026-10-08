@@ -1,6 +1,6 @@
 # {Biz Name} Astro + Decap CMS site template
 
-A `{variable}` template built from CodeStitch's Intermediate Astro Decap CMS starter kit (CC0). Design, components and Decap blog are unchanged. Only the content moved into one data file.
+A `{variable}` template built from CodeStitch's Intermediate Astro Decap CMS starter kit (CC0). The design, styles, layout and Decap blog setup are unchanged. Hard-coded demo copy in the components and pages moved into one data file, and the two CodeStitch demo blog posts became placeholder posts.
 
 ## Where the variables live
 
