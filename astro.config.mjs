@@ -4,6 +4,7 @@ import icon from "astro-icon";
 
 export default defineConfig({
 	site: "https://example.com", // {Site URL}: replace with the real live URL for each site
+	base: process.env.BASE ?? "/",
 	integrations: [
 		icon(),
 		sitemap({
