@@ -1,4 +1,5 @@
 ---
+import { COPY, TOKENS } from "@data/template";
 // Utils
 import { Picture, getImage } from "astro:assets";
 
@@ -21,12 +22,12 @@ import port9 from "@assets/images/projects/port9.jpg";
 const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 ---
 
-<BaseLayout title="Projects" description="Meta description for the page" heroImage={optimizedImage}>
+<BaseLayout title={COPY.pages.project2.title} description={COPY.pages.project2.description} heroImage={optimizedImage}>
 	<!-- ============================================ -->
 	<!--                    BANNER                   -->
 	<!-- ============================================ -->
 
-	<Banner title="Project 2" image={optimizedImage} />
+	<Banner title={COPY.pages.project2.title} image={optimizedImage} />
 
 	<!-- ============================================ -->
 	<!--                   Gallery                    -->
@@ -57,7 +58,7 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 					<Picture src={port9} alt="new kitchen cabinets" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture3" }} />
 				</div>
 			</div>
-			<a href="/contact/" class="cs-button-solid">Get Free Quote</a>
+			<a href="/contact/" class="cs-button-solid">{COPY.gallery.quoteButton}</a>
 		</div>
 	</section>
 	<CTA />
